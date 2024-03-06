@@ -18,17 +18,18 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {showLinks && (
-        <div className="links-container">
-          <ul className="links">
-            {links.map((link) => (
-              <li key={link.id}>
-                <a href={link.url}>{link.text}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="links-container">
+        <ul className={"links"}>
+          {links.map((link) => (
+            <li
+              className={showLinks ? "show-links" : "hide-links"}
+              key={link.id}
+            >
+              <a href={link.url}>{link.text}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 };

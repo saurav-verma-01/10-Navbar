@@ -44,13 +44,26 @@ a {
   flex-direction: column;
   gap: 1rem;
   font-size: 1rem;
-  padding: 1rem 0;
+
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.links li {
+  transition: all 1s ease-in-out;
+}
 .links a {
   padding: 0.25rem 1rem;
 }
 .links a:hover {
   color: rgb(6, 62, 174);
+}
+.hide-links {
+  height: 0;
+  background-color: yellow;
+  overflow: hidden;
+  padding: 0rem;
+}
+.show-links {
+  background-color: orangered;
+  height: auto;
+  padding: 0.25rem;
 }
