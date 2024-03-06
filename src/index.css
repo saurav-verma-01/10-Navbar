@@ -23,20 +23,32 @@ a {
 .header {
   width: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .nav-toggle {
   width: 2rem;
   height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-toggle svg {
   font-size: 1rem;
+}
+
+.links-container {
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
 .links {
@@ -49,6 +61,7 @@ a {
 }
 .links li {
   transition: all 1s ease-in-out;
+  padding: 0.25rem;
 }
 .links a {
   padding: 0.25rem 1rem;
@@ -66,4 +79,31 @@ a {
   background-color: orangered;
   height: auto;
   padding: 0.25rem;
+}
+.socials {
+  display: none;
+}
+
+@media screen and (min-width: 920px) {
+  .nav-toggle {
+    display: none;
+  }
+  .socials {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .socials svg {
+    font-size: 1.25rem;
+  }
+  .links-container {
+    height: 5rem !important;
+    width: 80rem;
+  }
+  .links {
+    flex-direction: row;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 }
